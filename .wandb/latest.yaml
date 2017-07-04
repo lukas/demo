@@ -1,0 +1,5 @@
+wandb_version: 1
+
+batch_size:
+  desc: Number of training examples in a mini-batch
+  value: 32
