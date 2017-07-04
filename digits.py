@@ -6,6 +6,9 @@ from keras.layers import Flatten
 
 from keras.layers import Dropout
 from keras.utils import np_utils
+from wandb import Config
+
+config = Config()
 
 # load data
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
@@ -31,6 +34,6 @@ model.add(Dense(num_classes, activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # Fit the model
-model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=1)
+model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=config.epochs)
 
 model.save("digits.h5")

@@ -3,3 +3,9 @@ wandb_version: 1
 batch_size:
   desc: Number of training examples in a mini-batch
   value: 32
+epochs:
+  desc: Number of epochs in training
+  value: 4
+training_set:
+  desc: Training set used
+  value: mnist

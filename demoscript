@@ -1,0 +1,14 @@
+wandb init
+
+python digits.py | wandb run-1
+Show git tag
+Show bucket / training.log
+
+Add the following to digits.py
+
+from Config import wandb
+config = Config()
+
+Run the following
+
+wandb config set epochs=3
